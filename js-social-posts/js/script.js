@@ -30,22 +30,22 @@
 const posts = [
     {
         "id": 1,
-        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-        "media": "https://unsplash.it/600/300?image=171",
+        "content": "Salve.",
+        "media": "https://unsplash.it/600/300?image=172",
         "author": {
-            "name": "Phil Mangione",
-            "image": "https://unsplash.it/300/300?image=15"
+            "name": "Giovanni Salve",
+            "image": "https://www.clipartmax.com/png/small/180-1809318_picture-300-x-300-pixel.png"
         },
         "likes": 80,
         "created": "04-30-2022"
     },
     {
         "id": 2,
-        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-        "media": "https://unsplash.it/600/300?image=171",
+        "content": "Sarà così?",
+        "media": "https://unsplash.it/600/300?image=165",
         "author": {
             "name": "Sarah Temea",
-            "image": "https://unsplash.it/300/300?image=15"
+            "image": "https://unsplash.it/300/300?image="
         },
         "likes": 45,
         "created": "05-25-2022"
@@ -56,18 +56,18 @@ const posts = [
         "media": "",
         "author": {
             "name": "Noemi Rebecchi",
-            "image": "https://unsplash.it/300/300?image=15"
+            "image": "https://www.clipartmax.com/png/small/167-1677660_podcast-logo-300-x-300.png"
         },
         "likes": 89,
         "created": "02-12-2022"
     },
     {
-        "id": 5,
-        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "id": 4,
+        "content": "Mannagia hai il Mac",
         "media": "https://unsplash.it/600/300?image=171",
         "author": {
             "name": "Alberto Bodasca",
-            "image": "https://unsplash.it/300/300?image=15"
+            "image": "https://unsplash.it/300/300?image="
         },
         "likes": 112,
         "created": "03-01-2023"
@@ -75,3 +75,104 @@ const posts = [
 ];
 
 
+
+
+
+
+
+const container = document.querySelector('#container');
+
+for (let i = 0; i < posts.length; i++) {
+
+    let {id, content, media, author, likes, created} = posts[i];
+
+    container.innerHTML += `<div class="post">
+            <div class="post__header">
+                <div class="post-meta">                    
+                    <div class="post-meta__icon">
+                        <img class="profile-pic" src="${author.image}" alt="${author.name}">                    
+                    </div>
+                    <div class="post-meta__data">
+                        <div class="post-meta__author">${author.name}</div>
+                        <div class="post-meta__time">4 mesi fa</div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="post__text">${content}</div>
+            <div class="post__image">
+                <img src="${media}" alt="">
+            </div>
+            <div class="post__footer">
+                <div class="likes js-likes">
+                    <div class="likes__cta">
+                        <a class="like-button  js-like-button" href="#" data-postid="${id}">
+                            <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+                            <span class="like-button__label">Mi Piace</span>
+                        </a>
+                    </div>
+                    <div class="likes__counter">
+                        Piace a <b id="like-counter-1" class="js-likes-counter">${likes}</b> persone
+                    </div>
+                </div> 
+            </div> `;
+            const takeButton = document.querySelector(".like-button").addEventListener(`click`,elementClicked);
+            console.log(takeButton);
+}
+
+
+
+function elementClicked(){
+    
+    return  this.classList.add("blue");
+    
+}
+
+
+
+
+
+
+
+
+
+
+// const post = document.querySelector(".posts-list");
+// const structor = createDomElement(posts);
+// post.append(structor);
+// console.log(post);
+
+// function createDomElement(elementPost, ahthorName, ahthorImage){
+//     const containerInfoPost = document.createElement("div");
+//     containerInfoPost.classList.add("post");
+//     containerInfoPost.innerHTML = `
+//     <div class="post__header">
+//     <div class="post-meta">                    
+//         <div class="post-meta__icon">
+//             <img class="profile-pic" src="${elementPost.author.image}" alt="${ahthorName}">                    
+//         </div>
+//         <div class="post-meta__data">
+//             <div class="post-meta__author">${elementPost.author[0]}</div>
+//             <div class="post-meta__time">${elementPost.created}</div>
+//         </div>                    
+//     </div>
+// </div>
+// <div class="post__text">${elementPost.content}</div>
+// <div class="post__image">
+//     <img src="${elementPost.media}" alt="">
+// </div>
+// <div class="post__footer">
+//     <div class="likes js-likes">
+//         <div class="likes__cta">
+//             <a class="like-button  js-like-button" href="#" data-postid="1">
+//                 <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+//                 <span class="like-button__label">Mi Piace</span>
+//             </a>
+//         </div>
+//         <div class="likes__counter">
+//             Piace a <b id="like-counter-1" class="js-likes-counter">${elementPost.likes}</b> persone
+//         </div>
+//     </div> 
+// </div> 
+//     `;
+// //     // console.log(containerInfoPost);
+// }
