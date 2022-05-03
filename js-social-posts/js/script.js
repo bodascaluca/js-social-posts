@@ -37,6 +37,41 @@ const posts = [
             "image": "https://unsplash.it/300/300?image=15"
         },
         "likes": 80,
-        "created": "2021-06-25"
+        "created": "04-30-2022"
+    },
+    {
+        "id": 2,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/300?image=171",
+        "author": {
+            "name": "Sarah Temea",
+            "image": "https://unsplash.it/300/300?image=15"
+        },
+        "likes": 45,
+        "created": "05-25-2022"
+    },
+    {
+        "id": 3,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "",
+        "author": {
+            "name": "Noemi Rebecchi",
+            "image": "https://unsplash.it/300/300?image=15"
+        },
+        "likes": 89,
+        "created": "02-12-2022"
+    },
+    {
+        "id": 5,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/300?image=171",
+        "author": {
+            "name": "Alberto Bodasca",
+            "image": "https://unsplash.it/300/300?image=15"
+        },
+        "likes": 112,
+        "created": "03-01-2023"
     }
 ];
+
+
